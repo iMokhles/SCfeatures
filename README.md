@@ -21,12 +21,17 @@ then click Run to install the app on your device or build to build ipa only
 
 Mokhlas Hussien for the main code in SCFeatures
 
-Unlimapps for the ppsideloader project
+CokePokes for Phantom
+
+Unlimapps for the ppsideloader project and Snap+
 
 alexzielenski for optool
+
 Tyilo for insert_dylib
 
-donate: imokhls@aol.fr
+## donate
+
+paypal email: imokhls@aol.fr
 
 
 License
