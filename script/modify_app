@@ -1,0 +1,253 @@
+#export
+
+#PRODUCT_SETTINGS_PATH
+IM_CONFIG_PATH="$SOURCE_ROOT/IM_SIDELOADER_OPTIONS.plist"
+
+CUSTOM_APP_NAME=$(/usr/libexec/PlistBuddy -c "Print CUSTOM_APP_NAME" "$IM_CONFIG_PATH")
+echo "CUSTOM_APP_NAME: $CUSTOM_APP_NAME"
+
+#define some common paths
+TEMP_PATH="${SRCROOT}/temp"
+# WORKING_DIR="${SRCROOT}/working_dir"
+EXTRACTED_IPA_PATH="$TEMP_PATH/EXTRACTED_IPA"
+TWEAK_BUNDLE_PATH="${SRCROOT}/bundle"
+
+rm -rf "$TEMP_PATH" || true
+# rm -rf "$WORKING_DIR" || true
+
+mkdir -p "$TEMP_PATH" || true
+# mkdir -p "$WORKING_DIR" || true
+
+#lets extract the IPA
+echo "EXTRACTING IPA"
+unzip -oqq "${SRCROOT}/snapchat.ipa" -d "$EXTRACTED_IPA_PATH"
+
+#find the .app path
+APP_PATH=$(set -- "$EXTRACTED_IPA_PATH/Payload/"*.app; echo "$1")
+echo "FOUND APP PATH: $APP_PATH"
+
+#define some common variables
+HOOKED_APP_BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier"  "$APP_PATH/Info.plist")
+
+HOOKED_APP_NAME=$(/usr/libexec/PlistBuddy -c "Print CFBundleDisplayName"  "$APP_PATH/Info.plist")
+HOOKED_APP_NAME="$CUSTOM_APP_NAME"
+
+HOOKED_EXECUTABLE=$(/usr/libexec/PlistBuddy -c "Print CFBundleExecutable"  "$APP_PATH/Info.plist")
+HOOKED_EXE_PATH="$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/$HOOKED_EXECUTABLE"
+
+#lets download the pp tweak for the app located in root
+# echo "DOWNLOADING PP TWEAK"
+# PP_TWEAK_ZIP_PATH="$TEMP_PATH/pptweak.zip"
+# curl -L "https://beta.unlimapps.com/ppsideloaded/$HOOKED_APP_BUNDLE_ID" -o "$PP_TWEAK_ZIP_PATH"
+
+#now we can unzip the tweak into working directory
+# echo "EXTRACTING PP TWEAK"
+# unzip -oqq "$PP_TWEAK_ZIP_PATH" -d "$WORKING_DIR"
+
+#copy over the app contents
+echo "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/"
+rm -rf "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app" || true
+mkdir -p "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app" || true
+cp -rf "$APP_PATH/" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/"
+
+#copy over all the dylibs
+cp -rf "$TWEAK_BUNDLE_PATH/" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/"
+
+#lets make sure the HOOKED_EXE has correct permissions
+echo "EXE NOT EXECUTABLE SO CHANGING PERMISSIONS"
+chmod +x "$HOOKED_EXE_PATH"
+
+#change the display name
+echo 'Change App Name'
+/usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $HOOKED_APP_NAME" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+#add the dylib
+/opt/optool/optool uninstall -p "@executable_path/SCFeatures.dylib"  -t "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/$HOOKED_EXECUTABLE"
+"${SRCROOT}/script/insert_dylib" --all-yes --inplace --overwrite "@executable_path/SCFeatures.dylib" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/$HOOKED_EXECUTABLE"
+
+# /opt/optool/optool uninstall -p "@executable_path/pptweak.dylib"  -t "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/SCFeatures.dylib"
+# "${SRCROOT}/script/insert_dylib" --all-yes --inplace --overwrite "@executable_path/pptweak.dylib" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/SCFeatures.dylib"
+
+# /opt/optool/optool uninstall -p "@executable_path/phantom_exo.dylib"  -t "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/SCFeatures.dylib"
+# "${SRCROOT}/script/insert_dylib" --all-yes --inplace --overwrite "@executable_path/phantom_exo.dylib" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/SCFeatures.dylib"
+
+#add the correct entitlements
+TEMP_PLIST="$TEMP_PATH/temp.plist"
+ORIG_CODE_SIGN_ENTITLEMENTS="$SOURCE_ROOT/app.entitlements"
+REAL_CODE_SIGN_ENTITLEMENTS="$TEMP_PATH/app.entitlements"
+
+security cms -D -i ~/Library/MobileDevice/Provisioning\ Profiles/"$EXPANDED_PROVISIONING_PROFILE.mobileprovision" -o "$TEMP_PLIST"
+
+PROFILE_EMBEDDED=~/Library/MobileDevice/Provisioning\ Profiles/"$EXPANDED_PROVISIONING_PROFILE.mobileprovision"
+PROFILE_FILESIZE=$(stat -f%z "$PROFILE_EMBEDDED")
+PROFILE_FILEDATE=$(perl -le 'print((stat shift)[9])' "$PROFILE_EMBEDDED")
+
+cp "$PROFILE_EMBEDDED" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/embedded.mobileprovision"
+
+cp $ORIG_CODE_SIGN_ENTITLEMENTS $REAL_CODE_SIGN_ENTITLEMENTS
+
+ICLOUD_CONTAINER_ID=$(/usr/libexec/PlistBuddy -c "Print :Entitlements:com.apple.developer.icloud-container-identifiers:0"  "$TEMP_PLIST")
+APP_GROUP_ID=$(/usr/libexec/PlistBuddy -c "Print :Entitlements:com.apple.security.application-groups:0"  "$TEMP_PLIST")
+APP_KEYCHAIN_ID=$(/usr/libexec/PlistBuddy -c "Print :Entitlements:application-identifier"  "$TEMP_PLIST")
+
+echo "CloudID: $ICLOUD_CONTAINER_ID"
+
+if [ -f "$REAL_CODE_SIGN_ENTITLEMENTS" ]; then
+    echo "File  found!"
+
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.icloud-container-environment array" "$REAL_CODE_SIGN_ENTITLEMENTS"
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.icloud-container-environment:0 string Development" "$REAL_CODE_SIGN_ENTITLEMENTS"
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.icloud-container-environment:1 string Production" "$REAL_CODE_SIGN_ENTITLEMENTS"
+
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.icloud-container-development-container-identifiers array" "$REAL_CODE_SIGN_ENTITLEMENTS"
+    /usr/libexec/PlistBuddy -c "Add :com.apple.developer.icloud-container-development-container-identifiers:0 string $ICLOUD_CONTAINER_ID" "$REAL_CODE_SIGN_ENTITLEMENTS"
+fi
+
+#app ( ids )
+APP_NEW_BUNDLE_ID=${APP_KEYCHAIN_ID#*.}
+echo "Change App ID: $APP_NEW_BUNDLE_ID"
+/usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $APP_NEW_BUNDLE_ID" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+
+SCGroupIdentifier=$(sudo /usr/libexec/PlistBuddy -c "Print SCGroupIdentifier"  "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist" 2>/dev/null)
+exitCode=$?
+if (( exitCode != 0 )); then
+        echo "Change App Group ID: $APP_GROUP_ID"
+    /usr/libexec/PlistBuddy -c "Set :SCGroupIdentifier $APP_GROUP_ID" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+fi
+
+SCKeychainAccessIdentifier=$(sudo /usr/libexec/PlistBuddy -c "Print SCKeychainAccessIdentifier"  "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist" 2>/dev/null)
+exitCode=$?
+if (( exitCode != 0 )); then
+    echo "Change App Keychain ID: $APP_KEYCHAIN_ID"
+    /usr/libexec/PlistBuddy -c "Set :SCKeychainAccessIdentifier $APP_KEYCHAIN_ID" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+fi
+
+echo "Change App CRITTERCISM_IDENTIFIER: d396e067d9d14eb895f755b2e3f9a35b00555300"
+/usr/libexec/PlistBuddy -c "Set :CRITTERCISM_IDENTIFIER d396e067d9d14eb895f755b2e3f9a35b00555300" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+echo "Change App Bundle Name: SCFeaturesApp"
+/usr/libexec/PlistBuddy -c "Set :CFBundleName SCFeaturesApp" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+# CFBundleName
+echo "Add App Keychain ID: $APP_KEYCHAIN_ID"
+/usr/libexec/PlistBuddy -c "Add :IMBAKeychainID string $APP_KEYCHAIN_ID" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+echo "Add App Icloud ID: $ICLOUD_CONTAINER_ID"
+/usr/libexec/PlistBuddy -c "Add :IMBAICloudID string $ICLOUD_CONTAINER_ID" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+echo "Add App Group ID: $APP_GROUP_ID"
+/usr/libexec/PlistBuddy -c "Add :IMBAGroupID string $APP_GROUP_ID" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+echo "Add App Profile Size: $PROFILE_FILESIZE"
+/usr/libexec/PlistBuddy -c "Add :AppSizeID string $PROFILE_FILESIZE" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+echo "Add App Profile Date: $PROFILE_FILEDATE"
+/usr/libexec/PlistBuddy -c "Add :AppSizeDate string $PROFILE_FILEDATE" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+HOOKED_APP_BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString"  "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist")
+echo "FOUND HOOKED_APP_BUNDLE_VERSION: $HOOKED_APP_BUNDLE_VERSION"
+
+echo "Delete App DeviceSupported Key: UISupportedDevices"
+/usr/libexec/PlistBuddy -c "Delete :UISupportedDevices" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+echo "Add ipad full screen support"
+/usr/libexec/PlistBuddy -c "Add ::UIDeviceFamily:1 integer 2" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+# CFBundleName
+# echo "Add App New Bundle Version Date: 10.0.0.1"
+# /usr/libexec/PlistBuddy -c "Set :CFBundleVersion string 10.0.0.1" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+# echo "Add App New Short Version Date: 10.0.0"
+# /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString string 10.0.0" "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Info.plist"
+
+
+#sign all the executable binaries
+for DYLIB in "$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/"*.dylib
+do
+    if [ -f "$DYLIB" ]; then
+        FILENAME=$(basename $DYLIB)
+        echo "SIGNING: $FILENAME"
+        /usr/bin/codesign --force --sign "$EXPANDED_CODE_SIGN_IDENTITY" "$DYLIB"
+    fi
+    
+done
+
+APP_PLUGINS_PATH="$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/PlugIns"
+rm -rf $APP_PLUGINS_PATH
+
+# if [ "$OVERWRITE_ORIGINAL_APP" != true ] ; then
+#     echo 'PUSH IS NOT ENABLED'
+#     #plugins cant be used on duplicate so lets just delete them
+#     rm -rf "$APP_PLUGINS_PATH" || true
+# fi
+
+# if [ -d "$APP_PLUGINS_PATH" ]; then
+#     for PLUGIN in "$APP_PLUGINS_PATH/"*.appex
+#     do
+#         #grab the plugin exe name
+#         #echo "PLUGIN: $PLUGIN"
+
+#         #if we don't care about push we can install it as an additional app
+#         PLUGIN_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier"  "$PLUGIN/Info.plist")
+#         echo "PLUGIN_ID: $PLUGIN_ID"
+
+#         PLUGIN_EXE=$PLUGIN/$(/usr/libexec/PlistBuddy -c "Print CFBundleExecutable"  "$PLUGIN/Info.plist")
+#         echo "PLUGIN_EXE: $PLUGIN_EXE"
+
+#         #lets make sure the plugin has correct permissions
+#         if ! [[ -x "$PLUGIN_EXE" ]]
+#         then
+#             echo "PLUGIN_EXE NOT EXECUTABLE SO CHANGING PERMISSIONS"
+#             chmod +x "$PLUGIN_EXE"
+#         else
+#             echo "PLUGIN_EXE IS EXECUTABLE"
+#         fi
+
+#         #sign the extension
+#         echo "SIGNING: $PLUGIN_ID"
+#         /usr/bin/codesign --force --sign "$EXPANDED_CODE_SIGN_IDENTITY" "$PLUGIN_EXE" 
+
+#         #we also need to sign and update the plist of any app inside the plugin
+#         for PLUGIN_APP in "$PLUGIN/"*.app
+#         do
+#             echo "PLUGIN_APP: $PLUGIN_APP"
+#             if [ -d "$PLUGIN_APP" ]; then
+#                 PLUGIN_APP_EXE=$PLUGIN_APP/$(/usr/libexec/PlistBuddy -c "Print CFBundleExecutable"  "$PLUGIN_APP/Info.plist")
+#                 echo "PLUGIN_APP_EXE: $PLUGIN_APP_EXE"
+
+#                 #lets make sure the plugin has correct permissions
+#                 if ! [[ -x "$PLUGIN_APP_EXE" ]]
+#                 then
+#                     echo "PLUGIN_APP_EXE NOT EXECUTABLE SO CHANGING PERMISSIONS"
+#                     chmod +x "$PLUGIN_APP_EXE"
+#                 else
+#                     echo "PLUGIN_APP_EXE IS EXECUTABLE"
+#                 fi
+
+#                 PLUGIN_APP_ID=$(/usr/libexec/PlistBuddy -c "Print CFBundleIdentifier"  "$PLUGIN_APP/Info.plist")
+#                 echo "PLUGIN_APP_ID: $PLUGIN_APP_ID"
+
+#                 #sign the extension
+#                 echo "SIGNING: $PLUGIN_APP_ID"
+#                 /usr/bin/codesign --force --sign "$EXPANDED_CODE_SIGN_IDENTITY" "$PLUGIN_APP_EXE" 
+#             fi
+#         done
+#     done
+# fi
+
+APP_FRAMEWORKS_PATH="$BUILT_PRODUCTS_DIR/$TARGET_NAME.app/Frameworks"
+if [ -d "$APP_FRAMEWORKS_PATH" ]; then
+for FRAMEWORK in "$APP_FRAMEWORKS_PATH/"*
+do
+    #sign the FRAMEWORK
+    FILENAME=$(basename $FRAMEWORK)
+    echo "SIGNING: $FILENAME WITH $EXPANDED_CODE_SIGN_IDENTITY"
+
+    /usr/bin/codesign --force --sign "$EXPANDED_CODE_SIGN_IDENTITY" "$FRAMEWORK" 
+done
+fi
+
+#make sure to add entitlements to the original app binary
+echo "SIGNING: FINAL BINARY WITH $EXPANDED_CODE_SIGN_IDENTITY ENTITLEMENTS: $REAL_CODE_SIGN_ENTITLEMENTS"
+/usr/bin/codesign --force --sign "$EXPANDED_CODE_SIGN_IDENTITY" --entitlements "$REAL_CODE_SIGN_ENTITLEMENTS" --timestamp=none "$HOOKED_EXE_PATH" 

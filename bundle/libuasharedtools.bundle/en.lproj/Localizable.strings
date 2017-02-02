@@ -1,0 +1,37 @@
+{
+    "SECURITY_SETTINGS" = "Security Settings";
+    "SET_PASSCODE" = "Set Passcode";
+    "ENTER_PASSWORD" = "Enable a password and/or TouchID to access the Instagram App";
+    "DELETE_PASSCODE" = "Delete Passcode";
+    "USE_TOUCH_ID" = "Use Touch ID";
+    
+    "APPEARANCE_OPTIONS" = "Appearance Options";
+    "FULL_SCREEN" = "Full Screen";
+    "FULL_SCREEN_DESC" = "Turn on to enable full screen, giving you more screen real estate";
+    
+    "SUPPORT_HEADER" = "SUPPORT";
+    
+    "PREMIUM_HEADER" = "Ad Removal";
+    "SUPPORT_REMOVE_ADS_TITLE" = "Support us and remove ads for";
+    "SUPPORT_PURCHASE_REMOVE_ADS_TITLE" = "Purchase Ad Removal for";
+    "LOGOUT_FROM_TWEAK" = "Logout from";
+    "CHANGE_PP_PASSWORD" = "Change Password";
+    "AD_SETTINGS" = "Ad Settings";
+    "SUPPORT_ADS_HAVE_BEEN_REMOVED" = "Your ads have been removed!";
+    
+    "HEY_THERE_ALERT" = "Hey There!";
+    "NO_THANKS_ALERT" = "No Thanks";
+    
+    "TWEET_TO_REMOVE_ADS" = "Tweeting will remove IG ++ ads for 1.5 weeks. You can tweet for FREE every week. Your support is awesome!";
+    "MISSING_INFORMATION" = "Missing Information";
+    "FILL_OUT_ALL_INFO" = "Make sure you fill out all of the information!";
+    "OK" = "Ok";
+    "PAYMENT_THANK_YOU_TITLE" = "Thanks!";
+    "PAYMENT_CONFIRMATION" = "You have removed ads forvever. Thanks for your support it means a ton!";
+    "PAYMENT_OK" = "Okay!";
+    "CLOSE_APP" = "Close App";
+    "CANCEL" = "Cancel";
+    "APP_RESTART_REQUIRED" = "Enabling this feature requires restarting the Instagram app. You can close the app now by selecting 'Close App' and restarting.";
+    "OOPS" = "Oops!";
+    "MUST_HAVE_TWITTER" = "You need to have a twitter account to like ++";
+}

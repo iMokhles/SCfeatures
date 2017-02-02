@@ -1,0 +1,852 @@
+﻿/* WorldWide */
+"%@ error!" = "%@ erreur!";
+
+/* WorldWide */
+"%@ saved!" = "%@ sauvegardé!";
+
+/* PHMediaUpload.m */
+"1. SC Video" = "1. Vidéo SC";
+
+/* PHMediaUpload.m */
+"2. iOS Video" = "2. Vidéo iOS";
+
+/* PHEmailViewController.m */
+"\nCheck your internet connection & try again. If problem persists, try in an hour or so. (Perhaps website construction?)" = "\nVérifiez votre connection Internet et réessayez. Si le problème persiste, essayez dans environ une heure. (Le site web pourrait être en construction.)";
+
+/* PHEmailViewController.m */
+"\nIt can take up to a week+ for a reply depending on the current volume of emails." = "\nIl peut prendre jusqu'à plus d'une semaine pour obtenir une réponse dépendamment du nombre d'emails à traiter.";
+
+/* WorldWide */
+"\nThanks for installing Phantom. This tweak is POWERED by advertisements. Show your support by purchasing a license within Settings." = "\nMerci d'avoir installé Phantom. Ce tweak est PROPULSÉ par la publicité. Démontrez votre support en achetant une licence dans les réglages.";
+
+/* WorldWide */
+"A new version of Phantom is available:\n\nInstalled version: %@\nAvailable version: %@" = "Une nouvelle version de Phantom est disponible:\n\nVersion installée: %@\nVersion disponible: %@";
+
+/* SettingsHook */
+"A wild iPad appeared!\n\nWould you like to use @rpetrich's \n\"Full Force\" tweak packaged within Phantom to enable iPad mode? \n\nIf you would like to download & use @rpetrich's separate tweak to use in multiple applications, press \"Use @rpetrich's\" button." = "Un iPad sauvage apparaît!\n\nAimeriez-vous utiliser le tweak \n\"Full Force\" de @rpetrich  dans Phantom pour activer le mode iPad? \n\nSi vous désirez télécharger & utiliser le tweak de @rpetrich séparément pour l'utiliser dans de multiples applications, appuyez sur le bouton \"Use @rpetrich's\".";
+
+/* WorldWide */
+"Abort" = "Annuler";
+
+/* WorldWide */
+"Add" = "Ajouter";
+
+/* PHSettingsViewController.m */
+"ADDITIONAL SERVICES" = "SERVICES ADDITIONNELS";
+
+/* WorldWide */
+"Album" = "Album";
+
+/* FeedSettingsViewController.m */
+"Always Keep Snaps" = "Toujours garder les Snaps";
+
+/* PHLogVideoViewController.m */
+"Are you sure you want to delete all logged videos?" = "Êtes-vous certains de vouloir supprimer toutes les vidéos cataloguées?";
+
+/* VideoViewController.m */
+"Are you sure you want to delete all saved videos?" = "Êtes-vous certains de vouloir supprimer toutes les vidéos sauvegardées?";
+
+/* PHSettingsViewController.m */
+"Are you sure you want to reset Phantom's button placements?" = "Êtes-vous certains de vouloir réinitialiser le positionnement des boutons de Phantom?";
+
+/* PHMessageSettingsViewController.m */
+"Auto Keep Messages" = "Automatiquement sauvegarder les messages";
+
+/* SaveToViewController.m */
+"Auto Save" = "Sauvegarde automatique";
+
+/* SaveToViewController.m */
+"AUTO SAVE SETTINGS" = "SAUVEGARDE AUTOMATIQUE DES RÉGLAGES";
+
+/* SaveToViewController.m */
+"Auto save to: %@" = "Sauvegarder automatiquement vers: %@";
+
+/* WorldWide */
+"Back" = "Retour";
+
+/* NotificationViewController.m */
+"Big Thanks to: Thomas Finch" = "Grand merci à: Thomas Finch";
+
+/* WorldWide */
+"Bluetooth Required" = "Bluetooth Requis";
+
+/* PHEmailViewController.m */
+"Bug Report" = "Rapport de bug";
+
+/* PHCameraSettingsViewController.m */
+"Camera Options" = "Options de l'Appareil Photo";
+
+/* WorldWide */
+"Camera roll" = "Pellicule photo";
+
+/* MainHook */
+"Camera Timer" = "Retardateur";
+
+/* WorldWide */
+"Cancel" = "Annuler";
+
+/* MainHook */
+"Capture image in how many seconds?" = "Capturer l'image dans combien de secondes?";
+
+/* PHPreviewSettingsViewController.m */
+"Celsius" = "Celsius";
+
+/* SaveToViewController.m */
+"Change Album Name" = "Renommer l'album";
+
+/* PassettingsViewController.m */
+"Change Password" = "Changer le mot de passe";
+
+/* WorldWide */
+"Clear" = "Effacer";
+
+/* NotificationViewController.m */
+"Clear Badges (on exit)" = "Effacer les badges (à la sortie)";
+
+/* PHEmailViewController.m */
+"Contact" = "Contact";
+
+/* ContactSettingsViewController.m */
+"CONTACT OPTIONS" = "OPTIONS DE CONTACT";
+
+/* ContactSettingsViewController.m */
+"Contact Options" = "Options de Contact";
+
+/* WorldWide */
+"Copy" = "Copier";
+
+/* WorldWide */
+"Create" = "Créer";
+
+/* CasperManageGroupViewController.m */
+"Create a Group.." = "Créer un Groupe..";
+
+/* SCSelectHook */
+"Create Group.." = "Créer un Groupe..";
+
+/* CasperManageGroupViewController.m */
+"Create New Group" = "Créer un Nouveau Groupe";
+
+/* PassettingsViewController.m */
+"Create Password" = "Créer un Mot de Passe";
+
+/* SaveToViewController.m */
+"create/specify" = "créer/spécifier";
+
+/* DataSaveSettingsViewController.m */
+"Data Saver" = "Économiseur de Données";
+
+/* NotificationViewController.m */
+"DEFAULT TONES" = "TONALITÉS PAR DÉFAUT";
+
+/* WorldWide */
+"Delete" = "Supprimer";
+
+/* DataSaveSettingsViewController.m */
+"Disable Auto Load Stories" = "Désactiver le Chargement Auto des Stories";
+
+/* PHCameraSettingsViewController.m */
+"Disable Chroma Noise Reduction" = "Désactiver la Réduction du Bruit Chroma";
+
+/* DataSaveSettingsViewController.m */
+"Disable Discovery" = "Désactiver Discovery";
+
+/* PHCameraSettingsViewController.m */
+"Disable Hold to Record" = "Désactiver Maintenir pour Enregistrer";
+
+/* FeedSettingsViewController.m */
+"Disable Hold to View" = "Désactiver Maintenir pour Visionner";
+
+/* WorldWide */
+"Dismiss" = "Ignorer";
+
+/* PHMessageSettingsViewController.m */
+"Don't Receive isTyping" = "Ne pas recevoir \"est en train de composer un message\"";
+
+/* PHMessageSettingsViewController.m */
+"Don't Send Blue Button" = "Ne pas Envoyer le Bouton Bleu";
+
+/* PHMessageSettingsViewController.m */
+"Don't Send isTyping" = "Ne pas envoyer \"est en train de composer un message\"";
+
+/* WorldWide */
+"Donate" = "Faire une donation";
+
+/* WorldWide */
+"Done" = "Fait";
+
+/* MainHook */
+"Editing Phantom button placement, triple tap upload button to exit!" = "Modifier le placement du bouton Phantom, triple cliquez sur le bouton d'upload pour quitter!";
+
+/* WorldWide */
+"Email" = "Email";
+
+/* PHEmailViewController.m */
+"Email Address" = "Addresse Email";
+
+/* PHEmailViewController.m */
+"Email Failed To Send!" = "L'Email n'a pu être envoyé!";
+
+/* WorldWide */
+"Email failed to send. Please try again." = "L'Email n'a pu être envoyé. S'il vous plaît réessayez.";
+
+/* PHEmailViewController.m */
+"Email Sent Successfully!" = "Email envoyé avec succès!";
+
+/* WorldWide */
+"Enable" = "Activer";
+
+/* PassettingsViewController.m */
+"Enable Password" = "Activer le Mot de Passe";
+
+/* NotiSpoofViewController.m */
+"Enable Spoofing" = "Activer le Trucage";
+
+/* WorldWide */
+"Enter" = "Entrer";
+
+/* PassettingsViewController.m */
+"Enter a password for the Phantom Vault!" = "Entrez un mot de passe pour la Voûte Phantom!";
+
+/* PHEmailViewController.m */
+"Enter a valid email address so the developer can get back to you about your problem!" = "Entrez une adresse email valide pour que le développeur puisse vous contacter au sujet de votre problème!";
+
+/* PHEmailViewController.m */
+"Enter a valid email address so the developer can get back to you!" = "Entrez une adresse email valide pour que le développeur puisse vous contacter!";
+
+/* PHSettingsViewController.m */
+"Enter a valid email address to register a license to your device" = "Entrez une adresse email valide pour enregistrer une license à votre appareil";
+
+/* PHSettingsViewController.m */
+"Enter Password" = "Entrez le mot de passe";
+
+/* PHSettingsViewController.m */
+"Enter the Phantom password to unlock the vault!" = "Entrez le mot de passe Phantom pour débarrer la voûte!";
+
+/* PHSettingsViewController.m */
+"Entered the wrong password!" = "Mauvais mot de passe entré!";
+
+/* WorldWide */
+"Error!" = "Erreur!";
+
+/* PHMediaUpload.m */
+"Error: Try converting/fixing video before selecting.." = "Erreur: Essayez de convertir ou d'arranger le vidéo avant la selection..";
+
+/* MainHook */
+"Examples: 1, 3, 4, 20" = "Exemples: 1, 3, 4, 20";
+
+/* PHPreviewSettingsViewController.m */
+"Fahrenheit" = "Fahrenheit";
+
+/* WorldWide */
+"Failure!" = "Échec!";
+
+/* WorldWide */
+"Fatal.." = "Fatal..";
+
+/* FeedSettingsViewController.m */
+"Feed Options" = "Options du Fil";
+
+/* PHMediaUpload.m */
+"Flip Horizontal" = "Retourner Horizontalement";
+
+/* PHMediaUpload.m */
+"Flip Vertical" = "Retourner Verticalement";
+
+/* PreviewHook */
+"Fonts" = "Polices d'Écriture";
+
+/* PassettingsViewController.m */
+"Forgot Password? Delete SC & reinstall!" = "Mot de passe oublié? Effacez SC et réinstallez!";
+
+/* MainHook */
+"Friends will see you view their Stories." = "Vos amis vous verront visionner leurs Stories.";
+
+/* ContactSettingsViewController.m */
+"Hide Best Friends" = "Cacher les meilleurs amis";
+
+/* FeedSettingsViewController.m */
+"Hide Counter" = "Cacher le Compteur";
+
+/* PHStorySettingsViewController.m */
+"Hide Discovery" = "Cacher Discovery";
+
+/* PHStorySettingsViewController.m */
+"Hide Live Stories" = "Cacher les Live Stories";
+
+/* PHStorySettingsViewController.m */
+"Hide Recent Stories" = "Cacher les Stories Récentes";
+
+/* ContactSettingsViewController.m */
+"Hide Recents" = "Cacher les Recents";
+
+/* PHSettingsViewController.m */
+"How many licenses would you like to buy?" = "Combien de licenses désirez vous acheter?";
+
+/* WorldWide */
+"Hybrid" = "Hybride";
+
+/* PreviewHook */
+"I can't handle the pressure" = "Je ne peux pas supporter la pression";
+
+/* CasperManageGroupViewController.m */
+"ie: Colleagues, Brothers, Girlfriends" = "c.-à-d.: Collègues, Frères, Amies";
+
+/* WorldWide */
+"If you restored, request a license switch by emailing 'License Support'" = "Si vous avez restauré, demandez un changement de license en envoyant un email à 'License Support'";
+
+/* WorldWide */
+"Image" = "Image";
+
+/* LockedViewController.m */
+"Image added to camera roll!" = "Image ajoutée à la pellicule de l'appareil photo!";
+
+/* WorldWide */
+"Image copied to pasteboard!" = "Image copiée au presse-papiers!";
+
+/* PHSnapSaver.m */
+"Image saved to camera roll!" = "Image sauvegardée à la pellicule de l'appareil photo!";
+
+/* PHSnapSaver.m */
+"Image saved to vault!" = "Image sauvegardée à la voûte";
+
+/* WorldWide */
+"Important Warning!" = "Avertissement Important!";
+
+/* WorldWide */
+"Incompatible" = "Incompatible";
+
+/* WorldWide */
+"Install" = "Installer";
+
+/* WorldWide */
+"Installation Error!" = "Erreur d'Installation!";
+
+/* SaveToViewController.m */
+"Instant Save" = "Sauvegarde Instantanée";
+
+/* PHEmailViewController.m */
+"Invalid Email!" = "Email Invalide!";
+
+/* WorldWide */
+"Invalid Entry" = "Entrée Invalide";
+
+/* comment */
+"key" = "clé";
+
+/* PHPreviewSettingsViewController.m */
+"KM/H" = "KM/H";
+
+/* WorldWide */
+"Later" = "Plus tard";
+
+/* PHEmailViewController.m */
+"License Support" = "Support de license";
+
+/* PHLoggedViewController.m */
+"Log Sent Media" = "Cataloguer le Média Envoyé";
+
+/* PHLoggedViewController.m */
+"LOGGED SNAPS" = "SNAPS CATALOGUÉS";
+
+/* PHLoggedViewController.m */
+"Logged Snaps" = "Snaps catalogués";
+
+/* PHLoggedViewController.m */
+"Logged Videos" = "Vidéos cataloguées";
+
+/* WorldWide */
+"Made by @CokePokes" = "Fait par @CokePokes";
+
+/* PHSettingsViewController.m */
+"Make Changes" = "Faire des changements";
+
+/* CasperManageGroupViewController.m */
+"Manage Groups" = "Gérer les Groupes";
+
+/* SCSelectHook */
+"Manage Groups.." = "Gérer les Groupes..";
+
+/* PHMediaUpload.m */
+"Manually choose an orientation!" = "Manuellement choisir une orientation!";
+
+/* PHMessageSettingsViewController.m */
+"Message Options" = "Options de Message";
+
+/* NotiSpoofViewController.m */
+"Message: via Snapchat" = "Message: via Snapchat";
+
+/* No comment provided by engineer. */
+"microphone_access_message" = "microphone_access_message";
+
+/* No comment provided by engineer. */
+"microphone_access_title" = "microphone_access_title";
+
+/* WorldWide */
+"More" = "Plus";
+
+/* PHPreviewSettingsViewController.m */
+"MPH" = "MPH";
+
+/* WorldWide */
+"Never Show Again" = "Ne plus jamais afficher";
+
+/* WorldWide */
+"No" = "Non";
+
+/* PHCameraSettingsViewController.m */
+"No Shutter Sound" = "Aucun son d'obturateur";
+
+/* NotificationViewController.m */
+"No Sound" = "Aucun son";
+
+/* WorldWide */
+"Notice!" = "Avis!";
+
+/* NotificationViewController.m */
+"Notification Options" = "Options de Navigation";
+
+/* WorldWide */
+"NOTIFICATIONS" = "NOTIFICATIONS";
+
+/* WorldWide */
+"OFF" = "Arrêt";
+
+/* WorldWide */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"okay" = "ok";
+
+/* WorldWide */
+"Okay" = "Ok";
+
+/* WorldWide */
+"ON" = "Marche";
+
+/* FeedSettingsViewController.m */
+"Open Feed on Launch" = "Ouvrir le fil à l'ouverture";
+
+/* WorldWide */
+"Open in iFile" = "Ouvrir dans iFile";
+
+/* PHMediaUpload.m */
+"Orientation Tool" = "Outil d'Orientation";
+
+/* WorldWide */
+"Override" = "Outrepasser";
+
+/* PHMediaUpload.m */
+"Override Orientation" = "Outrepasser l'Orientation";
+
+/* LockedViewController.m */
+"Password Lock" = "Verrouillage par Mot de Passe";
+
+/* PassettingsViewController.m */
+"Password Settings" = "Réglages de Mot de Passe";
+
+/* PassettingsViewController.m */
+"PASSWORD SETTINGS" = "RÉGLAGES DE MOT DE PASSE";
+
+/* PHSettingsViewController.m */
+"Paypal Email" = "Email Paypal";
+
+/* MainHook */
+"Phantom button placement saved!" = "Placement du bouton Phantom sauvegardé!";
+
+/* SettingsHook */
+"Phantom Configuration" = "Configuration de Phantom";
+
+/* SCSelectHook */
+"PHANTOM GROUPS" = "GROUPES PHANTOM";
+
+/* LoginHook */
+"PHANTOM LOGIN" = "IDENTIFICATION PHANTOM";
+
+/* PHSettingsViewController.m */
+"Phantom Login" = "Identification Phantom";
+
+/* PHSettingsViewController.m */
+"PHANTOM SETTINGS" = "RÉGLAGES PHANTOM";
+
+/* PHSettingsViewController.m */
+"PHANTOM SUPPORT" = "SUPPORT PHANTOM";
+
+/* WorldWide */
+"Phantom Update" = "Mise à jour Phantom";
+
+/* PHLoggedViewController.m */
+"Photo" = "Photo";
+
+/* WorldWide */
+"Photos" = "Photos";
+
+/* PreviewHook */
+"Please & I repeat, PLEASE do NOT abuse location faking. Do not send snaps to \"Live Stories\" from different regions. Doing so could cause the end of Phantom :(\n\nAlso, do not update Snapchat in the future until Phantom has approved compatibility." = "S'il vous plaît et je répète, S'IL VOUS PLAÎT n'abuser PAS du trucage d'emplacement. N'envoyer pas de snaps aux \"Live Stories\" de différentes régions. Cela pourrait causer la fin de Phantom :(\n\nAussi, ne mettez pas à jour Snapchat dans le futur tant que Phantom n'a pas approuvé la compatibilité.";
+
+/* SaveToViewController.m */
+"Please enter a valid album name." = "S'il vous plaît entrez un nom d'album valide.";
+
+/* PHSettingsViewController.m */
+"Please enter a valid email address!" = "S'il vous plaît entrez une adresse email valide!";
+
+/* SaveToViewController.m */
+"Please enter an album name you'd like to save to." = "S'il vous plaît entrez un titre d'album dans lequel vous voudrerez sauvegarder.";
+
+/* PHEmailViewController.m */
+"Please enter the email used in the Phantom purchase!" = "S'il vous plaît entrez l'email utilisé dans l'achat de Phantom!";
+
+/* PHSettingsViewController.m */
+"Please enter your Paypal Login email." = "S'il vous plaît entrez votre email de connexion Paypal.";
+
+/* PHMediaUpload.m */
+"Please help determine origin of video. 1. Video was saved from Snapchat.\n2. Video was recorded from iOS camera app." = "S'il vous plaît aidez à déterminer l'origine de la vidéo. 1. Vidéo sauvegardé de Snapchat.\n2. Vidéo enregistré de l'application de caméra d'iOS.";
+
+/* CasperManageGroupViewController.m */
+"Please sumbit a valid name for your new Group!" = "S'il vous plaît soumettez un nom valide pour votre nouveau Groupe!";
+
+/* PHPreviewSettingsViewController.m */
+"Preview Options" = "Aperçu des Options";
+
+/* PHSnapSaver.m */
+"Problem saving image to custom album!" = "Problème durant la sauvegarde de l'image dans l'album personnel!";
+
+/* PHSnapSaver.m */
+"Problem saving image to vault.." = "Problème durant la sauvegarde de l'image à la voûte..";
+
+/* PHSnapSaver.m */
+"Problem saving video to custom album!" = "Problème durant la sauvegarde de la vidéo dans l'album personnel!";
+
+/* PHSnapSaver.m */
+"Problem saving video to vault.." = "Problème durant la sauvegarde de la vidéo à la voûte..";
+
+/* WorldWide */
+"Processing.." = "En traitement..";
+
+/* WorldWide */
+"Purchase" = "Achat";
+
+/* PHEmailViewController.m */
+"Purchase Email" = "Email d'achat";
+
+/* WorldWide */
+"Quit" = "Quitter";
+
+/* PHBTHelper.m */
+"Receiving data..." = "En réception de données...";
+
+/* PHSettingsViewController.m */
+"Remove Ads" = "Éliminer les pubs";
+
+/* WorldWide */
+"Rename" = "Renommer";
+
+/* WorldWide */
+"Reset" = "Réinitialiser";
+
+/* PHSettingsViewController.m */
+"Reset Phantom Button Layout" = "Réinitialiser la Disposition des Boutons Phantom";
+
+/* PHSettingsViewController.m */
+"Reset Placements" = "Réinitialiser la Disposition";
+
+/* WorldWide */
+"Restart Required" = "Redémarrage Requis";
+
+/* WorldWide */
+"Restart Snapchat!" = "Redémarrer Snapchat!";
+
+/* PHMediaUpload.m */
+"Rotate 180" = "Pivoter 180";
+
+/* PHMediaUpload.m */
+"Rotate Left" = "Pivoter à Gauche";
+
+/* PHMediaUpload.m */
+"Rotate Right" = "Pivoter à Droite";
+
+/* PHMediaUpload.m */
+"RotateRightFlipHorizontal" = "RotateRightFlipHorizontal";
+
+/* PHMediaUpload.m */
+"RotateRightFlipVertical" = "RotateRightFlipVertical";
+
+/* WorldWide */
+"Satellite" = "Satellite";
+
+/* WorldWide */
+"Save" = "Save";
+
+/* SaveToViewController.m */
+"Save instantly to: %@" = "Sauvegarder instantanément à: %@";
+
+/* SaveToViewController.m */
+"Save Options" = "Options de Sauvegarde";
+
+/* SaveToViewController.m */
+"Save to album: %@" = "Sauvegarder à l'Album: %@";
+
+/* WorldWide */
+"Save to camera roll" = "Sauvegarder dans la pellicule de l'appareil photo";
+
+/* SaveToViewController.m */
+"Save to vault" = "Sauvegarder à la voûte";
+
+/* WorldWide */
+"Save to.." = "Sauvegarder à..";
+
+/* PHSnapSaver.m */
+"Saved image to %@!" = "Image sauvegardée à %@!";
+
+/* LockedViewController.m */
+"Saved Images" = "Images Sauvegardées";
+
+/* LockedViewController.m */
+"SAVED MEDIA" = "MEDIA SAUVEGARDÉ";
+
+/* PHSettingsViewController.m */
+"Saved Media" = "Media Sauvegardé";
+
+/* LockedViewController.m */
+"Saved Snaps" = "Snaps Sauvegardés";
+
+/* PHSnapSaver.m */
+"Saved video to %@!" = "Vidéo sauvegardée à %@!";
+
+/* LockedViewController.m */
+"Saved Videos" = "Vidéos Sauvegardées";
+
+/* WorldWide */
+"Saving image.." = "Enregistrement de l'image..";
+
+/* WorldWide */
+"Saving video.." = "Enregistrement de la vidéo..";
+
+/* WorldWide */
+"Seems you've tried this too many times!" = "Il apparaît que vous avez essayé cela trop de fois!";
+
+/* SaveToViewController.m */
+"Select one default saving method when pressing the Save button on a snap." = "Sélectionnez une méthode par défaut lors de l'appui du bouton de Sauvegarde sur un snap.";
+
+/* SaveToViewController.m */
+"Select where you would like your Snaps to automatically save when viewing a Snap." = "Sélectionnez où vous voulez automatiquement sauvegarder vos Snaps lors de leurs visionnements.";
+
+/* PHCameraSettingsViewController.m */
+"Selecting Phantom in Activator is required to enable Volume To Snap. You can set a different event within the Activator app later." = "Sélectionner Phantom dans Activator est requis pour activer Volume À Snap. Vous pouvez configurer un différent évènement dans l'appli Activator plus tard.";
+
+/* WorldWide */
+"Send" = "Envoyer";
+
+/* WorldWide */
+"Send in SC" = "Envoyer dans SC";
+
+/* PHBTHelper.m */
+"Sending data..." = "Envoie des données...";
+
+/* PHEmailViewController.m */
+"Server Message:\n\n%@" = "Message du Serveur:\n\n%@";
+
+/* WorldWide */
+"Set" = "Configurer";
+
+/* WorldWide */
+"Setup" = "Configuration";
+
+/* FeedSettingsViewController.m */
+"Show Settings Icon" = "Afficher l'Icône de Réglages";
+
+/* FeedSettingsViewController.m */
+"Show Sublabels" = "Afficher les Sous-Étiquettes";
+
+/* WorldWide */
+"Skip" = "Passer";
+
+/* PHSnapSaver.m */
+"Snapchat does not have access to photos!" = "Snapchat n'a pas accès aux photos!";
+
+/* PHSettingsViewController.m */
+"Snapchat must be quit & re-launched for changes to take effect!" = "Snapchat doit être fermé et réouvert pour que les changements prennent effet!";
+
+/* PHBTHelper.m */
+"Snapchat needs to be restarted. If unsuccessful login, try the transfer again." = "Snapchat doit être redémarrer. Si la connexion faillit, réessayez le transfer.";
+
+/* WorldWide */
+"Sorry!" = "Désolé!";
+
+/* PHPreviewSettingsViewController.m */
+"Spoof Celsius" = "Truquer Celcius";
+
+/* PHPreviewSettingsViewController.m */
+"Spoof Fahrenheit" = "Truquer Fahrenheit";
+
+/* PHPreviewSettingsViewController.m */
+"Spoof KM/H" = "Truquer KM/H";
+
+/* FakeLocationViewController.m */
+"Spoof Location" = "Truquer la Location";
+
+/* PHPreviewSettingsViewController.m */
+"Spoof MPH" = "Truquer MPH";
+
+/* NotiSpoofViewController.m */
+"Spoof Notifications" = "Truquer les Notifications";
+
+/* NotiSpoofViewController.m */
+"SPOOF OPTIONS" = "TRUQUER LES OPTIONS";
+
+/* PHPreviewSettingsViewController.m */
+"SPOOF SPEED" = "TRUQUER LA VITESSE";
+
+/* PHPreviewSettingsViewController.m */
+"SPOOF TEMPERATURE" = "TRUQUER LA TEMPÉRATURE";
+
+/* NotificationViewController.m */
+"Spoofing" = "Trucage en cours";
+
+/* WorldWide */
+"Standard" = "Standard";
+
+/* NotificationViewController.m */
+"Statusbar Icon" = "Icône de la barre d'état";
+
+/* MainHook */
+"Stealth Mode Activated" = "Mode Furtif Activé";
+
+/* MainHook */
+"Stealth Mode Deactivated" = "Mode Furtif Désactivé";
+
+/* PHStorySettingsViewController.m */
+"Story Options" = "Options de Story";
+
+/* PHPreviewSettingsViewController.m */
+"Stretch Images" = "Étirer les Images";
+
+/* WorldWide */
+"Submit" = "Envoyer";
+
+/* PHEmailViewController.m */
+"Submit Bug" = "Soumettre un Bug";
+
+/* WorldWide */
+"Success!" = "Succès!";
+
+/* WorldWide */
+"Support" = "Support";
+
+/* PHEmailViewController.m */
+"Support Phantom by purchasing a license. If you purchased a license & you are not registered. Email dev within Phantom Support." = "Appuyez Phantom en achetant une license. Si vous avez acheté une license et que vous n'êtes pas enregistrés, envoyez un email au développeur via le Support Phantom.";
+
+/* NotificationViewController.m */
+"SYSTEM TONES" = "TONALITÉS SYSTÈME";
+
+/* PHStorySettingsViewController.m */
+"Tap to Advance" = "Appuyez pour Continuer";
+
+/* WorldWide */
+"Thank you so much for supporting my work. Enjoy the full version of Phantom!" = "Merci énormément d'appuyer mon travail. Profitez pleinement de la version complète de Phantom!";
+
+/* PHSettingsViewController.m */
+"Thanks for supporting Phantom!" = "Merci d'appuyer Phantom!";
+
+/* WorldWide */
+"There was a problem processing the payment, contact Phantom Support!" = "Il y a eu un problème lors du traitement du paiement, contactez le Support Phantom!";
+
+/* PHMessageSettingsViewController.m */
+"This feature comes with a side effect. Video chat will not work at all, the recipient's Snapchat app will think you're unavailable." = "Cette fonctionnalité vient avec un inconvénient. Le chat vidéo ne fonctionnera pas, l'appli Snapchat du récipient croiera que vous êtes indisponibles.";
+
+/* ContactSettingsViewController.m */
+"This feature does not hide best friends on the Snapchat server." = "Cette fonctionnalité ne cache pas les meilleurs amis du serveur Snapchat.";
+
+/* WorldWide */
+"This feature does not work on iOS6!" = "Cette fonctionnalité ne fonctionne pas sur iOS6!";
+
+/* NotiSpoofViewController.m */
+"Title: SC Username" = "Titre: Nom d'Utilisateur SC";
+
+/* SendHook */
+"To select all friends, press\n the \"Send To...\" text at the top!" = "Pour sélectionner tous les amis, appuyez\n  sur le texte \"Envoyer à...\" dans le haut de l'écran!";
+
+/* FakeLocationViewController.m */
+"To use, hold your finger on the map to select your new location." = "Pour utiliser, maintenez votre doigt sur la carte pour sélectionner votre nouvel emplacement.";
+
+/* PreviewHook */
+"Toggle Rainbow" = "Activer Arc-En-Ciel";
+
+/* PHSettingsViewController.m */
+"Touch ID is not set up!" = "Touch ID n'est pas configuré!";
+
+/* WorldWide */
+"Understood" = "Compris";
+
+/* FeedSettingsViewController.m */
+"Unlimited Replays" = "Revisionnements Illimités";
+
+/* WorldWide */
+"Update" = "Mettre à Jour";
+
+/* PHSettingsViewController.m */
+"Use your fingerprint or password to unlock the Vault." = "Utilisez votre empreinte digitale ou votre mot de passe pour débarrer la Voûte.";
+
+/* WorldWide */
+"Vault" = "Voûte";
+
+/* NotificationViewController.m */
+"VIBRATION TONES" = "TONALITÉS DE VIBRATION";
+
+/* WorldWide */
+"Video" = "Vidéo";
+
+/* PHPreviewSettingsViewController.m */
+"Video Editor" = "Éditeur de Vidéo";
+
+/* PHSnapSaver.m */
+"Video saved to camera roll!" = "Vidéo sauvegardée dans la pellicule de l'appareil photo!";
+
+/* PHSnapSaver.m */
+"Video saved to vault!" = "Vidéo sauvegardée dans la voûte!";
+
+/* PHCameraSettingsViewController.m */
+"Volume Snap" = "Volume Snap";
+
+/* CasperManageGroupViewController.m */
+"What would you like your group to be named?" = "Comment désirez-vous nommer votre groupe?";
+
+/* PassettingsViewController.m */
+"Would you like to use iOS8's fingerprint password?" = "Désirez-vous utiliser le mot de passe par empreinte digitale d'iOS8?";
+
+/* WorldWide */
+"Yes" = "Oui";
+
+/* MainHook */
+"You can now view your friend's Stories without sending a \"viewed\" stamp. Side effect: Stories will stay on top of the list as if you never viewed." = "Vous pouvez désormais visionner les Stories de vos amis sans envoyer un sceau \"vu\". Inconvénients: les Stories resteront au haut de la liste comme si vous ne les aviez jamais visionnées.";
+
+/* PHEmailViewController.m */
+"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup." = "Vous ne pouvez pas envoyer de tweet maintenant, assurez-vous que votre appareil possède une connexion à internet et que vous détenez au moins un compte Twitter configuré.";
+
+/* WorldWide */
+"You did not enter a valid number!" = "Vous n'avez pas entré un numéro valide!";
+
+/* PHCameraSettingsViewController.m */
+"You don't have Activator installed! Install it now?" = "Activator n'est pas installé! Désirez-vous l'installer maintenant?";
+
+/* PreviewHook */
+"You have an older version of Snapchat installed! Upgrade to use the location spoofing feature!" = "Vous détenez une version ancienne de Snapchat installée! Mettez-la à jour pour utiliser la fonction de trucage d'emplacement!";
+
+/* PHLoggedViewController.m */
+"You have not logged any images yet!" = "Vous n'avez pas encore catalogué d'images!";
+
+/* LockedViewController.m */
+"You have not saved any images yet!" = "Vous n'avez pas encore enregistré d'images!";
+
+/* MainHook */
+"You need \"Always Keep Snaps\" enabled to mark snaps read manually!" = "Vous devez avoir \"Toujours Garder les Snaps\" d'activé pour manuellement marquer les snaps comme vus!";
+
+/* LoginHook */
+"You will need bluetooth enabled to receive account information from the host device." = "Vous devez activer bluetooth pour recevoir de l'information du compte de l'appareil hôte.";
+
+/* PHSettingsViewController.m */
+"You will need bluetooth enabled to transfer account information to the target device." = "Vous devez activer bluetooth pour transférer de l'information du compte à l'appareil cible.";
+
+/* WorldWide */
+"You're out of licenses!" = "Vous êtes à cours de licenses!";
+
