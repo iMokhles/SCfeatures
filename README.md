@@ -9,6 +9,8 @@ needs improvements to fix those two issues ( forcing log-out or hanging the app 
 
 ## how to install
 
+disable all tweaks loading inside the modified version
+
 you need to install optool ( or download it and change line 65 to pointing it to the correct path in modify_app )
 
 connect your device and login with your developer account id in Xcode
